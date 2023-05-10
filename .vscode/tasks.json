@@ -249,6 +249,18 @@
             ],
             "problemMatcher": "$msCompile"
         },
+        {
+            "label": "build-prove-quotebook",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/prove/quotebook/quotebook.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
 
     ]
 }

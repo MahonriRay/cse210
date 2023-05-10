@@ -3,6 +3,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "name": "Sandbox Project",
             "type": "coreclr",
@@ -245,6 +246,18 @@
             "program": "${workspaceFolder}/final/Foundation4/bin/Debug/net7.0/Foundation4.dll",
             "args": [],
             "cwd": "${workspaceFolder}/final/Foundation4",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Quotebook",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-prove-quotebook",
+            "program": "${workspaceFolder}/prove/quotebook/bin/Debug/net7.0/quotebook.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/prove/quotebook",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
