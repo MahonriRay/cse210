@@ -1,7 +1,7 @@
 public class Menu
 {
-    private Journal _journal;
-    private Prompt _prompt;
+    // private Journal _journal;
+    // private Prompt _prompt;
     private Entry _entry;
 
     public Menu(Entry entry)
