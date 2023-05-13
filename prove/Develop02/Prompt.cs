@@ -2,11 +2,11 @@ public class Prompt
 {
     
     List<string> _prompts = new List<string>();
-    // private string _prompt = "";
+
     
     public Prompt()
     {
-        // _prompt = prompt;
+
     }
 
     public string GetPrompt()
@@ -45,7 +45,7 @@ public class Prompt
         }
 
         int lengthRandPrompt = (randPrompt._prompts.Count());
-        // Console.WriteLine(lengthRandPrompt);dot
+
         Random rnd = new Random();
         int promptNum = rnd.Next(lengthRandPrompt);
 
@@ -57,8 +57,4 @@ public class Prompt
         _prompts.Add(prompt);
     }
 
-    internal void AddPrompt(Entry entry)
-    {
-        throw new NotImplementedException();
-    }
 }

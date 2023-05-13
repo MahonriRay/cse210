@@ -26,11 +26,25 @@ public class Entry
         journalEntry = $"\n{entry._date} - {entry._prompt}\n{entry._response}\n";
         return journalEntry;
     }
-    public void AddEntry(string entry)
-    {
-        _entries.Add(entry);
-    }
 
 
 
 }
+
+
+//   -------------------------------
+//  |        CODE GRAVEYARD         |
+//   -------------------------------
+//                -|-
+//                 |
+//             .-'~~~`-.
+//           .'         `.
+//           |  R  I  P  |
+//           |           |
+//           |           |
+//         \\|           |//
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// public void AddEntry(string entry)
+// {
+//     _entries.Add(entry);
+// }
