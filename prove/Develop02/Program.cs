@@ -27,7 +27,7 @@ using System.IO;
 //         \\|           |//
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     // myJournal.LoadFromJournal();
-    
+
     // string test = prompt1.GetDate();
     // // Console.WriteLine($"\n{test}");
     // string entryPrompt = prompt1.GetPrompt();
