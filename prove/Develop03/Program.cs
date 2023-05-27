@@ -10,11 +10,12 @@ Scripture firstScripture = new Scripture(new Reference("1 Nephi", 1, 1), "I, Nep
 
 
 
-firstScripture.DisplayRef();
+// firstScripture.DisplayRef();
 // firstScripture.TestAdd();
 firstScripture.ConvertStringToList();
-firstScripture.WriteOutWord();
-firstScripture.TestHideWords();
+// firstScripture.WriteOutWord();
+// firstScripture.TestHideWords();
+firstScripture.HideDemWords();
 
 
 Word firstWord = new Word("POYO", true);

@@ -3,25 +3,39 @@ public class Word
     string _word;
     bool _isHidden;
     string _hiddenWord;
+    int _roundHidden;
 
-    public Word(string word, bool isHidden, string hiddenWord = "")
+    public Word(string word, bool isHidden, string hiddenWord = "", int roundHidden=0)
     {
         _word = word;
         _isHidden = isHidden;
         _hiddenWord = hiddenWord;
+        _roundHidden = roundHidden;
     }
 
     public void HideWord()
     {
         _isHidden = true;
-        // if(_isHidden == true)
-        // {
-        //     foreach (char letter in _word)
-        //     {
-        //         Console.Write("_");
-        //     }
-        //     Console.Write(" ");
-        // }
+    }
+    public void UnHideWord()
+    {
+        _isHidden = false;
+    }
+    public void SetRoundHidden(int rndHidden)
+    {
+        _roundHidden = rndHidden;
+    }
+    public int GetRoundHidden()
+    {
+        return _roundHidden;
+    }
+    public string GetWord()
+    {
+        return _word;
+    }
+    public bool GetHiddenStatus()
+    {
+        return _isHidden;
     }
     public void ShowWord()
     {
@@ -33,25 +47,6 @@ public class Word
             }
         }
     }
-    public void AddWord(string word)
-    {
-
-    }
-    public void SetTrue()
-    {
-        _isHidden = true;
-    }
-    // public bool GetBool()
-    // {
-    //     if(_isHidden == true)
-    //     {
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
-    // }
     public string GetWords()
     {
         if(_isHidden == true)
@@ -90,3 +85,26 @@ public class Word
 
     }
 }
+    // public bool GetBool()
+    // {
+    //     if(_isHidden == true)
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+    // }
+    // public void SetTrue()
+    // {
+    //     _isHidden = true;
+    // }
+            // if(_isHidden == true)
+        // {
+        //     foreach (char letter in _word)
+        //     {
+        //         Console.Write("_");
+        //     }
+        //     Console.Write(" ");
+        // }
