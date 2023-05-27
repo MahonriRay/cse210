@@ -68,6 +68,10 @@ public class Word
                 {
                     Console.Write(letter);
                 }
+                else if(Char.IsNumber(letter))
+                {
+                    Console.Write(letter);
+                }
                 else
                 {
                     Console.Write("_");

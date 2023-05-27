@@ -9,6 +9,8 @@ public class Scripture : Reference
     // public static ConsoleKey keyInfo;
     int thwRound = 0;
     int highestRnd = -1;
+    int randomNumber = 2;
+    bool allHidden = true;
     // public Scripture()
     // {
 
@@ -29,17 +31,9 @@ public class Scripture : Reference
     {
         _ref.DisplayReference();
     }
-    // public void TestAdd()
-    // {
-    //     _words.Add(new Word("I,", false, "I,"));
-    //     _words.Add(new Word("Nephi", false, "Nephi"));
-    // }
     public void ConvertStringToList()
     {
         string[] indivWords = _verse.Split(" ");
-        // int wordCount = 0;
-        // string wordCnt = wordCount.ToString();
-        // string newWord = $"newWord{wordCnt}";
         foreach (string word in indivWords)
         {
             _words.Add(new Word(word, false, word));
@@ -59,10 +53,22 @@ public class Scripture : Reference
             thingy.UnHideWord();
         }
     }
-                //     foreach (Word thang in _words)
-                // {
-                //     thang.WriteHideWord();
-                // }
+    public bool CheckAllWordsHidden()
+    {
+        foreach (Word word in _words)
+        {
+            if(word.GetHiddenStatus() == true)
+            {
+                allHidden = true;
+            }
+            else
+            {
+                allHidden = false;
+                return false;
+            }
+        }
+        return true;
+    }
     public void TestHideWords()
     {   
         foreach (Word thangthang in _words)
@@ -89,8 +95,7 @@ public class Scripture : Reference
                 else
                 {
                     var random = new Random();
-                    var randomNumber = random.Next(0,10);
-                    if(randomNumber < 5)
+                    if(randomNumber < 3)
                     {
                         int thisRound = thwRound + 1;
                         thingamajig.HideWord();
@@ -108,6 +113,8 @@ public class Scripture : Reference
                     {
                         thingamajig.WriteHideWord();
                     }
+                var randomNmbr = random.Next(0,11);
+                randomNumber = randomNmbr;
                 }
             }
             
@@ -125,7 +132,7 @@ public class Scripture : Reference
         }
         // break;
             
-        
+        randomNumber = 2;
     }
     public void HideDemWords()
     {
@@ -134,7 +141,14 @@ public class Scripture : Reference
         WriteOutWord();
         while(true)
         {
-            Console.WriteLine("\n[RETURN] to hide more words - [U]ndo to show previously hidden words");
+            if(CheckAllWordsHidden())
+            {
+                Console.WriteLine("\nAll words have been hidden. [U]ndo to show previously hidden words - [Q]uit to exit program");
+            }
+            else
+            {
+            Console.WriteLine("\n[RETURN] to hide more words - [U]ndo to show previously hidden words - [Q]uit to exit program");
+            }
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             if(keyInfo.KeyChar == '\r')
             {
@@ -154,7 +168,6 @@ public class Scripture : Reference
                     {
                         themWords.UnHideWord();
                     }
-                    // themWords.WriteHideWord();
                 }
                 // TestHideWords();
                 foreach (Word thoseWords in _words)
@@ -169,7 +182,11 @@ public class Scripture : Reference
                 {
                     
                 }
-                Console.WriteLine();
+                // Console.WriteLine();
+            }
+            else if(keyInfo.Key == ConsoleKey.Q)
+            {
+                Environment.Exit(0);
             }
         }
     }
@@ -230,3 +247,23 @@ public class Scripture : Reference
         //     return;
         // }  
         // thangthang.GetHiddenStatus() == true
+
+//         // int wordCount = 0;
+        // string wordCnt = wordCount.ToString();
+        // string newWord = $"newWord{wordCnt}";
+
+        //     foreach (Word thang in _words)
+// {
+//     thang.WriteHideWord();
+// }
+// public void TestAdd()
+// {
+//     _words.Add(new Word("I,", false, "I,"));
+//     _words.Add(new Word("Nephi", false, "Nephi"));
+// }
+
+                    // else if(themWords.GetRoundHidden() > thwRound)
+                    // {
+                    //     themWords.HideWord();
+                    // }
+                    // themWords.WriteHideWord();
