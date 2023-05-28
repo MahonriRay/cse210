@@ -6,7 +6,7 @@ using System;
 // Scripture Class :: List<word> _words (Word the class, not just a word), Reference _ref Methods:: Display, ConvertStringToList, HideWords(), IsCompletelyHidden
 // Program
 
-Scripture firstScripture = new Scripture(new Reference("1 Nephi", 1, 1), "I, Nephi, having been born of goodly parents. 2. Words of the prophet yo.");
+Scripture firstScripture = new Scripture(new Reference("1 Nephi", 1, 1, 2), "1. I, Nephi, having been born of goodly parents. 2. Words of the prophet yo.");
 
 
 
