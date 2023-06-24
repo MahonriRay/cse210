@@ -12,6 +12,15 @@ class Program
         Console.WriteLine("Hello Develop04 World!");
         // Menu menu1 = new Menu();
         // menu1.Display();
+        Activity act1 = new Activity();
+        Reflection ref1 = new Reflection();
+        Listing list1 = new Listing();
+        list1.RunIt();
+        act1.Countdown(5, 0);
+        ref1.PromptThemUp();
+        // List<string> prompts = Activity.ReadFile("Prompts.txt");
+        // string randPrompt = act1.PickRandPrompt(prompts);
+        // Console.WriteLine(randPrompt);
         Breathing breath1 = new Breathing();
         // breath1.BreatheIn(5);
         // breath1.BreatheInAnimation(1500);
