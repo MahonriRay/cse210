@@ -1,5 +1,6 @@
 public class Player
 {
+    List<Goal> _goals = new List<Goal>();
     int _userID;
     string _userName;
     public void SetID(int userID)

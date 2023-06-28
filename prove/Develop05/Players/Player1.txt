@@ -1,1 +1,3 @@
 UserID,1,Username,Player1
+Simple
+Checklist

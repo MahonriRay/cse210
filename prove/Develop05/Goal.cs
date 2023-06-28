@@ -1,9 +1,11 @@
 public abstract class Goal
 {
-    Player _player;
-    string  _goalName;
-    string _description;
-    int _goalPoints;
+    protected Player _player;
+    protected string _goalType;
+    protected string  _goalName;
+    protected string _description;
+    protected int _goalPoints;
+    public abstract void SetGoalType();
     public abstract void SetGoalName ();
     public abstract void SetDescription ();
     public abstract void SetPoints();

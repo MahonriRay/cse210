@@ -7,6 +7,10 @@ public class Checklist : Simple
     int _bonusPoints;
     int _bonusRequirement; //How many times the goal needs to be done to get bonus
 
+    public Checklist(Player player, string goalType, string goalName, string description, int goalPoints) : base(player, goalType, goalName, description, goalPoints)
+    {
+    }
+
     public void SetBonusPoints ()
     {
         Console.Write("What is the bonus for accomplishing it that many times?: ");
