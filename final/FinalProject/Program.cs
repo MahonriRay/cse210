@@ -1,9 +1,6 @@
 using System;
+using System.Media;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello FinalProject World!");
-    }
-}
+    BasicSynth synth1 = new BasicSynth();
+
+    synth1.BS_KeyDown();
