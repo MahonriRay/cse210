@@ -34,3 +34,22 @@ recept1.PrintGuestList();
 
 eventOut.ShortDescription();
 eventOut.FullDetails();
+
+
+
+
+// IGNORE THIS PLZ AND THANK YOU. CHECKING MATH STUFF FOR CALCULUS
+// double total = 62000;
+// // Math.Round(total, 10);
+// double salary=62000;
+// // Math.Round(salary, 10);
+
+// for (int i = 1; i < 45; i++)
+// {
+//     // float raise = 1.018f;
+//     double newsalaray = 62000 * (Math.Round(Math.Pow(1.018f, (i)), 15));
+//     total += ((float)newsalaray);
+//     Console.Write($"total after year {i+1}: ");
+//     Console.WriteLine($"{total}");
+//     salary = newsalaray;
+// }
